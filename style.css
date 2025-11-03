@@ -1,14 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-  font-family: Arial;
-  background: #f7f7f7;
-  text-align: center;
-  padding: 50px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px; 
 }
 
-form {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 30px; 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+  animation: fadeInSlideUp 0.7s ease-out forwards;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 150px; 
+}
+
+h2 {
+  color: #0072b5; 
+  text-align: center;
+  font-weight: 600; 
+}
+
+p {
+  color: #555555;
+  text-align: center;
+  font-size: 1.1em;
+} 
+
+label {
+  font-weight: 600; 
+  color: #333333;
   display: inline-block;
-  box-shadow: 0 0 10px #ccc;
+  margin-bottom: 5px; 
+} 
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+  
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #cccccc;
+  border-radius: 6px; 
+  box-sizing: border-box; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  
+  border-color: #0072b5; 
+  
+  box-shadow: 0 0 8px rgba(0, 114, 181, 0.3);
+
+  outline: none; 
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px; 
+  background-color: #6cc24a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  margin-top: 10px; 
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #5aaa3a; 
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
