@@ -159,4 +159,10 @@ button[type="submit"]:hover {
   }
 }
 
+.icon-success {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto 10px;
+}
 
