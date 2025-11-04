@@ -17,3 +17,29 @@ function validarCPF(cpf) {
 
   return true;
 }
+
+
+const form = document.querySelector("form");
+const modal = document.getElementById("modal-sucesso");
+const fecharModal = document.getElementById("fechar-modal");
+
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); 
+
+  
+  const cpfValido = validarCPF(document.getElementById("cpf").value);
+  if (!cpfValido) {
+    alert("CPF inválido! Verifique e tente novamente.");
+    return;
+  }
+
+
+  form.reset(); 
+  modal.style.display = "flex"; 
+});
+
+
+fecharModal.addEventListener("click", function () {
+  modal.style.display = "none";
+});
