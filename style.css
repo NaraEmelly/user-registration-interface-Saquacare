@@ -162,13 +162,12 @@ button[type="submit"]:hover {
 }
 
 #icon-success {
-  width: 60px;
-  height: 60px;
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
+  max-width: 150px;
 }
 
-/* ajustadores para tablets e celulares de grandes a pequenas telas */
+
 @media (max-width: 768px) {
   main {
     max-width: 90%;
@@ -189,7 +188,7 @@ button[type="submit"]:hover {
   }
 }
 
-/* Celulares pequenos */
+
 @media (max-width: 480px) {
   body {
     padding: 0;
