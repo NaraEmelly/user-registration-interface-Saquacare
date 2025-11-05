@@ -170,13 +170,9 @@ button[type="submit"]:hover {
 
 /* ajustadores para tablets e celulares de grandes a pequenas telas */
 @media (max-width: 768px) {
-  body {
-    padding-top: 15px;
-  }
-
   main {
-    width: 95%;
-    padding: 25px;
+    max-width: 90%;
+    padding: 20px;
   }
 
   .logo {
@@ -187,35 +183,43 @@ button[type="submit"]:hover {
     font-size: 1.4em;
   }
 
-  p {
-    font-size: 1em;
-  }
-
-  input,
-  button {
+  button[type="submit"] {
     font-size: 16px;
+    padding: 12px;
   }
 }
 
 /* Celulares pequenos */
 @media (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+
   main {
-    width: 95%;
-    padding: 20px;
+    margin: 15px;
+    padding: 18px;
+    max-width: 100%;
   }
 
   h2 {
     font-size: 1.2em;
   }
 
-  button[type="submit"] {
+  p {
+    font-size: 0.95em;
+  }
+
+  input,
+  button {
     font-size: 15px;
-    padding: 12px;
   }
 
   label {
-    font-size: 0.95em;
+    font-size: 0.9em;
+  }
+
+  .logo {
+    max-width: 100px;
   }
 }
-
 
