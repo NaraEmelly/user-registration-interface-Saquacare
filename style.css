@@ -9,13 +9,15 @@ body {
 }
 
 main {
+  width: 90%;
   max-width: 600px;
   margin: 20px auto;
   background-color: #ffffff;
-  padding: 30px; 
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   animation: fadeInSlideUp 0.7s ease-out forwards;
+  
 }
 
 .logo {
@@ -165,4 +167,55 @@ button[type="submit"]:hover {
   display: block;
   margin: 0 auto 10px;
 }
+
+/* ajustadores para tablets e celulares de grandes a pequenas telas */
+@media (max-width: 768px) {
+  body {
+    padding-top: 15px;
+  }
+
+  main {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  input,
+  button {
+    font-size: 16px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  main {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  button[type="submit"] {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  label {
+    font-size: 0.95em;
+  }
+}
+
 
