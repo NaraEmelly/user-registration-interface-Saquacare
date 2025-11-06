@@ -25,9 +25,9 @@ const fecharModal = document.getElementById("fechar-modal");
 
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
-  
+
   const cpfValido = validarCPF(document.getElementById("cpf").value);
   if (!cpfValido) {
     alert("CPF inválido! Verifique e tente novamente.");
@@ -35,8 +35,8 @@ form.addEventListener("submit", function (event) {
   }
 
 
-  form.reset(); 
-  modal.style.display = "flex"; 
+  form.reset();
+  modal.style.display = "flex";
 });
 
 

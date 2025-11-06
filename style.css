@@ -5,7 +5,7 @@ body {
   background-color: #f4f7f6;
   margin: 0;
   padding: 0;
-  padding-top: 30px; 
+  padding-top: 30px;
 }
 
 main {
@@ -17,44 +17,44 @@ main {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   animation: fadeInSlideUp 0.7s ease-out forwards;
-  
+
 }
 
 .logo {
   display: block;
   margin: 0 auto 20px;
-  max-width: 150px; 
+  max-width: 150px;
 }
 
 h2 {
-  color: #0072b5; 
+  color: #0072b5;
   text-align: center;
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 p {
   color: #555555;
   text-align: center;
   font-size: 1.1em;
-} 
+}
 
 label {
-  font-weight: 600; 
+  font-weight: 600;
   color: #333333;
   display: inline-block;
-  margin-bottom: 5px; 
-} 
+  margin-bottom: 5px;
+}
 
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="password"] {
-  
+
   width: 100%;
-  padding: 12px; 
+  padding: 12px;
   border: 1px solid #cccccc;
-  border-radius: 6px; 
-  box-sizing: border-box; 
+  border-radius: 6px;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -64,30 +64,30 @@ input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-  
-  border-color: #0072b5; 
-  
+
+  border-color: #0072b5;
+
   box-shadow: 0 0 8px rgba(0, 114, 181, 0.3);
 
-  outline: none; 
+  outline: none;
 }
 
 button[type="submit"] {
   width: 100%;
-  padding: 14px; 
+  padding: 14px;
   background-color: #6cc24a;
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 17px; 
-  font-weight: 600; 
-  cursor: pointer; 
-  margin-top: 10px; 
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #5aaa3a; 
+  background-color: #5aaa3a;
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -97,6 +97,7 @@ button[type="submit"]:hover {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -150,22 +151,27 @@ button[type="submit"]:hover {
   background-color: #5aaa3a;
 }
 
+
+.modal-content img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 150px;
+}
+
+
 @keyframes fadeInScale {
   from {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-#icon-success {
-  display: block;
-  margin: 0 auto 20px;
-  max-width: 150px;
-}
+
 
 
 @media (max-width: 768px) {
@@ -221,4 +227,3 @@ button[type="submit"]:hover {
     max-width: 100px;
   }
 }
-
