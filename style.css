@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
@@ -226,4 +227,8 @@ button[type="submit"]:hover {
   .logo {
     max-width: 100px;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f6d75ed78dbb4a7820063766abd77aff404adf20
