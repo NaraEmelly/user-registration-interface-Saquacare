@@ -1,5 +1,5 @@
 function validarCPF(cpf) {
-  cpf = cpf.replace(/[^\d]+/g, ''); 
+  cpf = cpf.replace(/[^\d]+/g, '');
   if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
 
   let soma = 0, resto;
@@ -20,10 +20,10 @@ function validarCPF(cpf) {
 
 
 function forceNumeric() {
-  this.value = this.value.replace(/\D/g, ''); 
+  this.value = this.value.replace(/\D/g, '');
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("nome").maxLength = 150;
   document.getElementById("cpf").maxLength = 11;
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("numero_sus").addEventListener("input", forceNumeric);
   document.getElementById("cep").addEventListener("input", forceNumeric);
   document.getElementById("telefone").addEventListener("input", forceNumeric);
-  
+
   document.getElementById("cpf").inputMode = "numeric";
   document.getElementById("numero_sus").inputMode = "numeric";
   document.getElementById("cep").inputMode = "numeric";
@@ -53,8 +53,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const campoConfirmaSenha = document.getElementById("confirma_senha");
 
   if (checkboxMostrarSenha) {
-    checkboxMostrarSenha.addEventListener("change", function() {
-      
+    checkboxMostrarSenha.addEventListener("change", function () {
+
       if (checkboxMostrarSenha.checked) {
         campoSenha.type = "text";
         campoConfirmaSenha.type = "text";
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-}); 
+});
 
 const form = document.querySelector("form");
 const modal = document.getElementById("modal-sucesso");
@@ -73,34 +73,27 @@ const fecharModal = document.getElementById("fechar-modal");
 
 
 form.addEventListener("submit", function (event) {
-<<<<<<< HEAD
   event.preventDefault();
 
-=======
-  event.preventDefault();  
->>>>>>> f6d75ed78dbb4a7820063766abd77aff404adf20
 
   const cpfValido = validarCPF(document.getElementById("cpf").value);
   if (!cpfValido) {
     alert("CPF inválido! Verifique e tente novamente.");
-    return; 
+    return;
   }
 
   const senha = document.getElementById("senha").value;
   const confirmaSenha = document.getElementById("confirma_senha").value;
 
-<<<<<<< HEAD
   form.reset();
   modal.style.display = "flex";
-=======
   if (senha !== confirmaSenha) {
     alert("As senhas digitadas não correspondem! Por favor, digite novamente.");
-    return; 
+    return;
   }
 
-  form.reset();  
-  modal.style.display = "flex";  
->>>>>>> f6d75ed78dbb4a7820063766abd77aff404adf20
+  form.reset();
+  modal.style.display = "flex";
 });
 
 
