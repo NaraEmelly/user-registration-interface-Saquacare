@@ -5,15 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro - SaquaCare</title>
-    <link rel="stylesheet" href="style.css">
+
+  <!-- icone -->
+  <link rel="icon" type="image/png" href="../Imgs/Logo SaquaCare.png">
+
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <main>
 
-    <img src="Imgs/Logo SaquaCare.png" alt="Logo SaquaCare" class="logo">
-
+    <!-- Logo -->
+    <img src="../Imgs/Logo SaquaCare.png" alt="Logo SaquaCare" class="logo">
 
     <h2>Cadastramento</h2>
     <p>Acesse a saúde pública de Saquarema de forma fácil.</p>
@@ -67,6 +72,7 @@
         <input type="text" id="complemento" name="complemento" placeholder="Apto, casa 2, etc.">
       </div>
       <br>
+
       <div>
         <label for="telefone">Telefone / Celular:</label><br>
         <input type="tel" id="telefone" name="telefone" placeholder="(22) 99999-9999" required>
@@ -106,18 +112,15 @@
     <br>
   </main>
 
+  <!-- Modal de sucesso -->
   <div id="modal-sucesso" class="modal">
-
     <div class="modal-content">
-      <img src="Imgs/checkcircle.png" alt="Check circle icon">
-
+      <img src="../Imgs/checkcircle.png" alt="Ícone de sucesso">
       <h3>CADASTRO EFETUADO!</h3>
       <button id="fechar-modal">Ok</button>
     </div>
-
   </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
