@@ -1,0 +1,6 @@
+flask==2.3.3 
+flask-sqlalchemy==3.0.5 
+flask-marshmallow==0.14.0 
+marshmallow-sqlalchemy==0.24.0 
+python-dotenv==1.0.0 
+werkzeug==2.3.7 
