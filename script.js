@@ -158,10 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
             senhaStrengthText.textContent = "Senha forte";
             senhaStrengthText.style.color = "green";
         }
-      const form = document.querySelector("form");
-            if (form) form.reset();
-    }
-
+   
+      
     if (campoSenha) {
         campoSenha.addEventListener("input", function () {
             verificarForcaSenha(campoSenha.value);
