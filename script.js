@@ -61,6 +61,7 @@ async function cadastrarUsuario(dadosUsuario) {
                 console.log('Formulário limpo para próximo cadastro');
             }
             
+            
         } else {
             console.error('Erro ao cadastrar:', resultado);
             alert('Erro ao cadastrar: ' + resultado.erro);
@@ -120,9 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-    // ===== NOVA FUNCIONALIDADE: VERIFICAÇÃO DE FORÇA DA SENHA =====
-    const senhaStrengthText = document.createElement("p");
+  const senhaStrengthText = document.createElement("p");
     senhaStrengthText.id = "senha-strength-text";
     senhaStrengthText.style.fontSize = "14px";
     senhaStrengthText.style.marginTop = "5px";
@@ -160,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
             verificarForcaSenha(campoSenha.value);
         });
     }
-    // ===== FIM DA NOVA FUNCIONALIDADE =====
 
     // Modal
     const modal = document.getElementById("modal-sucesso");
