@@ -61,7 +61,6 @@ async function cadastrarUsuario(dadosUsuario) {
                 console.log('Formulário limpo para próximo cadastro');
             }
             
-            
         } else {
             console.error('Erro ao cadastrar:', resultado);
             alert('Erro ao cadastrar: ' + resultado.erro);
@@ -121,6 +120,47 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // ===== NOVA FUNCIONALIDADE: VERIFICAÇÃO DE FORÇA DA SENHA =====
+    const senhaStrengthText = document.createElement("p");
+    senhaStrengthText.id = "senha-strength-text";
+    senhaStrengthText.style.fontSize = "14px";
+    senhaStrengthText.style.marginTop = "5px";
+    senhaStrengthText.style.fontWeight = "bold";
+    senhaStrengthText.style.transition = "color 0.3s ease";
+
+    if (campoSenha && campoSenha.parentNode) {
+        campoSenha.parentNode.insertBefore(senhaStrengthText, campoSenha.nextSibling);
+    }
+
+    function verificarForcaSenha(senha) {
+        let forca = 0;
+
+        if (senha.length >= 8) forca++;
+        if (/[A-Z]/.test(senha)) forca++;
+        if (/[0-9]/.test(senha)) forca++;
+        if (/[^A-Za-z0-9]/.test(senha)) forca++;
+
+        if (forca === 0) {
+            senhaStrengthText.textContent = "";
+        } else if (forca <= 1) {
+            senhaStrengthText.textContent = "Senha fraca";
+            senhaStrengthText.style.color = "red";
+        } else if (forca === 2 || forca === 3) {
+            senhaStrengthText.textContent = "Senha média";
+            senhaStrengthText.style.color = "orange";
+        } else if (forca === 4) {
+            senhaStrengthText.textContent = "Senha forte";
+            senhaStrengthText.style.color = "green";
+        }
+    }
+
+    if (campoSenha) {
+        campoSenha.addEventListener("input", function () {
+            verificarForcaSenha(campoSenha.value);
+        });
+    }
+    // ===== FIM DA NOVA FUNCIONALIDADE =====
 
     // Modal
     const modal = document.getElementById("modal-sucesso");
